@@ -23,5 +23,7 @@ listint_t *add_nodeint(listint_t **head, const int n);
 void free_listint_t(listint_t *head);
 int check_pal(listint_t **head, listint_t *last);
 int is_palindrome(listint_t **head);
+def replace_in_list(my_list, idx, element):
+def element_at(my_list, idx):
 
 #endif /*LISTS_H*/ 
