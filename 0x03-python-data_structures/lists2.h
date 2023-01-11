@@ -27,4 +27,5 @@ int is_palindrome(listint_t **head);
 def print_list_integer(my_list=[]):
 def element_at(my_list, idx):
 def new_in_list(my_list, idx, element):
+def print_matrix_integer(matrix=[[]]):
 #endif /*LISTS_H */
