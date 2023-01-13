@@ -2,8 +2,8 @@
 
 def print_matrix_integer(matrix=[[]]):
 
-    matrix = [[234], [567], [891]]
+    matrix = [[123], [456], [789]]
 
-    x = '\n'.join([''.join(['{:3}'.format(item) for item in row]) for now in matrix])
+    print("{:d}".format(matrix))
 
-    print(x)
+    
