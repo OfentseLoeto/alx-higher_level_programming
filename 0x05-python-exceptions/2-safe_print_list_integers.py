@@ -2,16 +2,15 @@
 
 def safe_print_list_integers(my_list=[], x=0):
 
-    try:
-        my_list = [0, 1, 2, 4, 5]
+    ret = 0
+    for i in range(0, x):
 
-        num = my_list[0]
+        try:
+            print("{:d}".format(my_list[i]), end="")
+            ret += 1
 
-
-        print("{:d}".format(my_list), end="")
-
-    except (ValueError, TypeError):
-        pass
+        except (ValueError, TypeError):
+            continue
         print("")
 
-    return (num)
+        return (ret)
