@@ -10,7 +10,7 @@ if number > 0:
 
 elif number < 0:
 
-    print("{} is negetive".format(number))
+    print("{} is negative".format(number))
 
 elif number == 0:
 
