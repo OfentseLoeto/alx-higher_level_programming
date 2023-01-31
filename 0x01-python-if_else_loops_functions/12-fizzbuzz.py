@@ -12,7 +12,7 @@ def fizzbuzz():
             print("Buzz ", end="")
 
         elif number % 3 == 0:
-            print("Buzz ", end="")
+            print("Fizz ", end="")
 
         else:
             print("{:d} ".format(number), end="")
