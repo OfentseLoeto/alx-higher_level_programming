@@ -1,9 +1,6 @@
 #!/usr/bin/python3
 
-def magic_calculation(a, b, c):
-
-    if a < b:
-        return c
-    if c > b:
-        return a + b
-    return a * b - c
+for ascii_num in range(122, 96, -1):
+    if ascii_num % 2 == 1:
+        ascii_num = ascii_num - 32
+        print("{:c}".format(ascii_num), end='')
