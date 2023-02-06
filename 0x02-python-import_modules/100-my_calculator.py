@@ -2,7 +2,7 @@
 
 if __name__ == "__main_":
 
-    from calculator_1 import add, sub, mul, div
+    from calculator_1.py import add, sub, mul, div
 
     from sys import argv
     if len(argv) == 4:
