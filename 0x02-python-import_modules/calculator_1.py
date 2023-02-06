@@ -29,7 +29,7 @@ def sub(a, b):
 
 def mul(a, b):
 
-    """My multiplication funtion
+    """My multiplication function
 
     Args:
 
