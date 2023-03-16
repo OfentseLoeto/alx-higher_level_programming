@@ -1,1 +1,3 @@
-mysql -u user -p -e "show databases;"
+-- Script to list all databases in MySQL server
+
+SHOW DATABASES;
