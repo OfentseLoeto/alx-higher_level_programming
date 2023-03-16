@@ -1,8 +1,1 @@
-SELECT
-  name
-
-FROM
-  
-ORDER BY
- 
- name;
+mysql -u user -p -e "show databases;"
