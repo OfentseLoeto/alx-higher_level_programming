@@ -2,4 +2,4 @@
 -- table second_table of the  MySQL server.
 
 SELECT AVG(score) AS [average]
-FROM [hbtn_0c_0].[second_table]
+FROM second_table
