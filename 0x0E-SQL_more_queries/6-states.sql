@@ -7,5 +7,5 @@
 
 CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;
 CREATE TABLE IF NOT EXISTS states(
-	id int auto_generated primary key UNIQUE not null,
+	id int auto_generated primary key not null UNIQUE,
 	name varchar(256) not null);
