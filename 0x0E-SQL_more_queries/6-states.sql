@@ -6,6 +6,7 @@
 -- If the table states already exists, your script should not fail
 
 CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;
-CREATE TABLE IF NOT EXISTS states(
-	id int auto_generated primary key not null UNIQUE,
+CREATE TABLE IF NOT EXISTS hbtn_0d_usa.states(
+	PRIMARY KEY(id)
+	id int not null auto_increment,
 	name varchar(256) not null);
