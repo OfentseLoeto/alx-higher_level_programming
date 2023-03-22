@@ -7,10 +7,10 @@
 -- If the table cities already exists, your script should not fail
 
 create database if not exists hbtn_0d_usa;
-create table hbtn_0d_usa.cities(
-	PRIMARY KEY(id),
-	id int not null auto_increment,
-	state_id int not null,
-	name varchar(256) not null,
-	FOREIGN KEY(state_id)
-	REFERENCES `hbtn_0d_usa`.`states`(id);
+create table hbtn_0d_usa.cities (
+	PRIMARY KEY(`id`),
+	`id` int not null AUTO_INCREMENT,
+	`state_id` int not null,
+	`name` varchar(256) not null,
+	FOREIGN KEY(`state_id`)
+	REFERENCES `hbtn_0d_usa`.`states`(`id`);
