@@ -3,10 +3,10 @@
 --The user_0d_2 password should be set to user_0d_2_pwd
 -- If the database hbtn_0d_2 already exists, your script should not fail
 
-create database IF NOT EXISTS `hbtn_0d_02`;
-create user IF NOT EXISTS 'user_0d_02'@'localhost'
+CREATE database IF NOT EXISTS hbtn_0d_02;
+CREATE user IF NOT EXISTS 'user_0d_02'@'localhost'
 IDENTIFIED BY 'user_0d_02_pwd';
 
 GRANT SELECT 
-PRIVILEGES ON `hbtn_0d_2`.* 
+PRIVILEGES ON hbtn_0d_2.* 
 TO 'user_0d_2'@'localhost';
