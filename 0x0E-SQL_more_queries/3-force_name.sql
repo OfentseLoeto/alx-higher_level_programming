@@ -4,6 +4,5 @@
 -- If the table force_name already exists, your script should not fail
 
 CREATE TABLE IF NOT EXISTS force_name(
-id int auto_increment primary key,
-name varchar(256) not null,
-completed bool default false);
+id int,
+name varchar(256) not null);
