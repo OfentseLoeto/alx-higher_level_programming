@@ -11,4 +11,4 @@ CREATE TABLE cities (
 	`id` INT UNIQUE AUTO_INCREMENT NOT NULL PRIMARY KEY,
 	`states_id` INT NOT NULL FOREIGN KEY,
 	`name` VARCHAR(256) NOT NULL,
-	REFERENCES `hbtn_0d_usa`.`states`(`id`);
+	REFERENCES `states_id`.`states`(`id`);
