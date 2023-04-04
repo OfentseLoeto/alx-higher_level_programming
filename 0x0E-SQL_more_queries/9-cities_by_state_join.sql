@@ -3,4 +3,4 @@
 -- Results must be sorted in ascending order by cities.id
 -- use only one SELECT statement
 
-SELECT * FROM states ORDER BY cities.id ASC;
+SELECT cities.id, cities.name, states.name FROM states ORDER BY cities.id ASC;
