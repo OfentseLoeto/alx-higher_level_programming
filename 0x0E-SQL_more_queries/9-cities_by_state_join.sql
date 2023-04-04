@@ -3,4 +3,4 @@
 -- Results must be sorted in ascending order by cities.id
 -- use only one SELECT statement
 
-SELECT * FROM hbtn_0d_usa ORDER BY cities.id ASC;
+SELECT * FROM hbtn_0d_usa.states ORDER BY cities.id ASC;
