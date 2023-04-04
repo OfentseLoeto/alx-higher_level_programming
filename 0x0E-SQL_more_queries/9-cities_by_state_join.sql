@@ -6,5 +6,5 @@
 SELECT 
 id, name, name
 FROM
-states
+cities
 ORDER BY cities.id ASC;
