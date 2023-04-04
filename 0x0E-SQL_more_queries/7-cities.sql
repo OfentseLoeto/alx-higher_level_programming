@@ -6,11 +6,11 @@
 -- If the database hbtn_0d_usa already exists, your script should not fail
 -- If the table cities already exists, your script should not fail
 
-create database if not exists hbtn_0d_usa;
-create table hbtn_0d_usa.cities (
+CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;
+CREATE TABLE cities (
 	PRIMARY KEY(`id`),
-	`id` int not null AUTO_INCREMENT,
-	`state_id` int not null,
-	`name` varchar(256) not null,
-	FOREIGN KEY(`state_id`)
+	`id` INT UNIQUE AUTO_INCREMENT NOT NULL,
+	`states_id` INT NOT NULL,
+	`name` VARCHAR(256) NOT NULL,
+	FOREIGN KEY(`states_id`)
 	REFERENCES `hbtn_0d_usa`.`states`(`id`);
