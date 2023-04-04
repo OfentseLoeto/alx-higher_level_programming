@@ -4,4 +4,4 @@
 SELECT *
 FROM cities
 WHERE name = 'California'
-ORDER BY id ASC;
+ORDER BY cities.id ASC;
