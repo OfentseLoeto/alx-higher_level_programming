@@ -3,5 +3,6 @@
 
 SELECT *
 FROM cities
-WHERE name = `California`
+WHERE name = 'California'
+AND id IS NULL OR id = ''
 ORDER BY cities.id ASC;
