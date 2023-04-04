@@ -2,6 +2,6 @@
 -- Results must be sorted in ascending order by cities.id
 
 SELECT *
-FROM cities
+FROM hbtn_0d_usa.cities
 WHERE name = 'California'
 ORDER BY cities.id ASC;
