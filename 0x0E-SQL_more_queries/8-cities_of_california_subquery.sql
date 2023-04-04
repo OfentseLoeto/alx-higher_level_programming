@@ -1,7 +1,7 @@
 -- lists all the cities of California
 -- Results must be sorted in ascending order by cities.id
 
-SELECT *
+SELECT name
 FROM hbtn_0d_usa.states
 WHERE name = 'California'
 ORDER BY cities.id ASC;
