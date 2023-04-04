@@ -8,9 +8,9 @@
 
 CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;
 CREATE TABLE cities.hbtn_0d_usa (
-	PRIMARY KEY(id),
+	PRIMARY KEY (id),
 	id INT NOT NULL AUTO_INCREMENT,
-	FOREIGN KEY(state_id),
 	state_id INT NOT NULL,
+	FOREIGN KEY (state_id),
 	name VARCHAR(256) NOT NULL,
 	REFERENCES hbtn_0d_usa.states(state_id);
