@@ -3,6 +3,6 @@
 -- Results must be sorted in ascending order by cities.id
 -- use only one SELECT statement
 
-SELECT `cities.name`, `states.name`
+SELECT `cities.id`,`cities.name`, `states.name`
 FROM `hbtn_0d_usa`
-ORDER BY `cities.id` ASC;
+ORDER BY `cities.id`;
