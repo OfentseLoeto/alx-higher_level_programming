@@ -2,6 +2,6 @@
 -- Results must be sorted in ascending order by cities.id
 
 SELECT *
-FROM cities.states
-WHERE name = 'California'
+FROM cities
+WHERE name = `California`
 ORDER BY cities.id ASC;
