@@ -4,7 +4,7 @@
 -- use only one SELECT statement
 
 SELECT 
-cities.id, cities.name, states.name
+id, name, name
 FROM
 states
 ORDER BY cities.id ASC;
