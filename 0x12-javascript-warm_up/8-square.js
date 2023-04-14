@@ -2,12 +2,12 @@
 
 // script that prints a square
 // The first argument is the size of the square
-// If the first argument can’t be converted to an integer, print “Missing size”
+// If the first argument can’t be converted to an integer,
+// print “Missing size”
 // use the character X to print the square
 
 const arg = process.argv[2];
 
-// convert arg to int
 const size = parseInt(arg);
 if (isNaN(size)) {
   console.log('Missing size');
