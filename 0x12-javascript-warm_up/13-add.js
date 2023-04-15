@@ -4,7 +4,9 @@
 // The function must be visible from outside
 // The name of the function must be add
 
-const add = (a, b) => {
+function add(a, b) {
   return a + b;
-};
-console.log(add(4, 8));
+}
+
+const result = add(5, 3);
+console.log(result);
