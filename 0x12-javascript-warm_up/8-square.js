@@ -6,6 +6,7 @@
 // print “Missing size”
 // use the character X to print the square
 
+
 const arg = process.argv[2];
 
 const size = parseInt(arg);
