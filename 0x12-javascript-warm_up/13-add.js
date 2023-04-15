@@ -4,9 +4,6 @@
 // The function must be visible from outside
 // The name of the function must be add
 
-function add(a, b) {
-  return a + b;
-}
-
-const result = add(5, 3);
-console.log(result);
+exports.add = function (a, b) {
+ return (a + b);
+};
