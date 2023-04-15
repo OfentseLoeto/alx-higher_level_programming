@@ -7,18 +7,6 @@
 // You must do it recursively
 // You must use a function
 
-//function factorial (n) {
-  //if (isNaN(n)) {
-    //return 1;
-//  } else if (n === 0 || n === 1) {
-  //  return 1;
- // } else {
-   // return n * factorial(n - 1);
-  //}
-//}
-//const n = parseInt(process.argv[2]);
-//console.log(`The factorial of ${n} is ${factorial(n)}.`);
-
 function factorial (a) {
   if (a <= 0) {
     return 0;
@@ -35,4 +23,3 @@ if (isNaN(myInt)) {
 } else {
   console.log(factorial(myInt));
 }
-
