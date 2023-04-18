@@ -1,6 +1,7 @@
 #!/usr/bin/python3
+
 """
-Module list state where name start with N
+Module that list state where name start with N letter
 """
 import sys
 import MySQLdb
