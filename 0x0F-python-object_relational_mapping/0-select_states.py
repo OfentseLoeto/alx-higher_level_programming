@@ -11,9 +11,12 @@ if __name__ == '__main__':
     
     cursor = dtb.cursor()
 
-    cursor.execute("SELECT * FROM states ORDER BY states.id ASC")
+    cursor.execute("SELECT * FROM states ORDER BY states.id ASC;")
     
     rows = cursor.fetchall()
     
     for row in rows:
         print(row)
+
+        cursor.close()
+        dtb.close()
