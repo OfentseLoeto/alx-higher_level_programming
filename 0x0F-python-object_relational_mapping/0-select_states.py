@@ -7,8 +7,8 @@ import sys
 
 if __name__ == '__main__':
 
-    username = sys.argv[1],
-    password = sys.argv[2],
+    username = sys.argv[1]
+    password = sys.argv[2]
     database = sys.srgv[3]
 
 
@@ -16,7 +16,7 @@ if __name__ == '__main__':
     
     cursor = dtb.cursor()
 
-    cursor.execute("SELECT * FROM states ORDER BY id ASC")
+    cursor.execute("SELECT * FROM states ORDER BY states.id ASC")
     
     rows = cursor.fetchall()
     
