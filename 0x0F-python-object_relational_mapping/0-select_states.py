@@ -15,15 +15,18 @@ def main():
             db=sys.argv[3],
             charset="utf8")
     
-    cursor = conn.cursor()
+    cur = conn.cursor()
 
-    query = "SELECT id,name FROM states ORDER BY states.id ASC;"
+    query = "SELECT id,name FROM states ORDER BY id ASC"
     
-    cursor.execute(query)
-    rows = cursor.fetchall()
+    cur.execute(query)
+    rows = cur.fetchall()
     
     for row in rows:
         print(row)
+
+        cur.close()
+        conn.close()
 
         if __name__ == "__main__":
             main()
