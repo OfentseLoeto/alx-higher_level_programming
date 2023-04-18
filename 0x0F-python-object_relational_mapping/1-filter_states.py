@@ -13,7 +13,7 @@ if __name__ == "__main__":
     res = cursor.fetchall()
 
     for row in res:
-        print(row)
+        print "row"
 
     cursor.close()
     db.close()
