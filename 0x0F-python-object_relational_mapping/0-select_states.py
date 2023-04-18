@@ -11,7 +11,7 @@ if __name__ == '__main__':
     
     cursor = dtb.cursor()
 
-    cursor.execute("SELECT * FROM states;")
+    cursor.execute("SELECT * FROM states ORDER BY id ASC;")
     
     rows = cursor.fetchall()
     
