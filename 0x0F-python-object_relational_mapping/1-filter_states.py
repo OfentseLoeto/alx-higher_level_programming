@@ -8,7 +8,7 @@ if __name__ == '__main__':
 
     cursor = db.cursor()
 
-    cursor.execute("SELECT * FROM states WHERE name 'N%' ORDER BY id ASC")
+    cursor.execute("SELECT * FROM states WHERE states.id => '4' ORDER BY id ASC")
 
     print(cursor.fetchall())
 
