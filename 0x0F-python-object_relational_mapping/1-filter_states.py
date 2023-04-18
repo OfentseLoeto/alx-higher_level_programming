@@ -4,18 +4,17 @@ import sys
 
 if __name__ == "__main__":
 
+    db = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3], charset="utf8")
 
-    hbtn_0e_0_usa = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3], state_name=sys.argv[4], charset="utf8")
+    cursor = db.cursor()
 
-    cursor = hbtn_0e_0_usa.cursor()
+    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%\' ORDER BY id ASC")
 
-    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC".format(state_name))
+    res = cursor.fetchall()
 
-    results = cursor.fetchall()
-
-    for row in results:
+    for row in res:
         print(row)
 
     cursor.close()
-    hbtn_0e_0_usa.close()
+    db.close()
 
