@@ -9,9 +9,7 @@ if __name__ == "__main__":
 
     cursor = hbtn_0e_0_usa.cursor()
 
-    sql = ("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC".format(state_name))
-
-    cursor.execute(sql)
+    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC".format(state_name))
 
     results = cursor.fetchall()
 
