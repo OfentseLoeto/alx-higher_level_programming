@@ -21,8 +21,8 @@ def main():
                 FROM cities INNER JOIN states ON cities.state_id=states.id"""
     cur.execute(query)
     row = cur.fetchall()
-    for r in row:
-        print(r)
+    for rw in row:
+        print(rw)
     cur.close()
     conn.close()
 
