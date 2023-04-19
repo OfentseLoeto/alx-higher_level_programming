@@ -1,18 +1,30 @@
 #!/usr/bin/python3
 
-import MySQLdb
 import sys
+import MySQLdb
 
-if __name__ == '__main__':
+def main():
 
-    db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2],
-            db=sys.argv[3], port=3306)
+    conn = MySQLdb.connect(
+            host="locahost",
+            port=3306,
+            user=sys.argv[1],
+            passwd=sys.argv[2],
+            db=sys.argv[3],
+            charset="utf8")
 
-    cur = db.cursor()
+    cur = conn.cursor()
+    search = sys.argv[4]
 
-    cur.execute("SELECT * FROM states WHERE 1 = 1;", (sys.argv[4],)
+    cur.execute("""SELECT id,name FROM states WHERE name = %s ORDER BY id ASC""", (search,))
 
-            states = cursor.fetchall()
+            row = cur.fetchall()
 
-            for state in states:
-            print(state)
+            for row in rows:
+            print(row)
+
+            cur.close()
+            conn.close()
+
+    if __name__ == '__main__':
+    main()
