@@ -20,15 +20,16 @@ def main():
     
     cur = conn.cursor()
 
-    query = ("SELECT * id,name FROM states ORDER BY id ASC")
+    query = "SELECT id,name FROM states ORDER BY id ASC"
     
     cur.execute(query)
     rows = cur.fetchall() 
     for row in rows:
         print(row)
+
         cur.close()
         conn.close()
         
 
-    if __name__ == '__main__':
+    if __name__ == "__main__":
             main()
