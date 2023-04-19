@@ -1,31 +1,31 @@
 #!/usr/bin/python3
-
+"""
+ script that lists all cities from the database hbtn_0e_4_usa
+"""
 import sys
 import MySQLdb
 
-def main():
 
+def main():
     conn = db.MySQLdb.connect(
                            host="localhost",
                            port=3306,
-                           user=username,
-                           passwd=password,
-                           db=database,
+                           user=sys.argv[1],
+                           passwd=sys.argv[2],
+                           db=sys.argv[3],
                            charset="utf8"
                                )
 
     cur = conn.cursor()
-
-    query = execute """SELECT cities.name, cities.id states.name
+    query = execute """SELECT cities.id, cities.name, states.name
                         FROM cities INNER JOIN states ON cities.state_id=states.id"""
     cur.execute(query)
     row = cur.fetchall()
-
     for rw in rows:
         print(rw)
-
     cur.close()
     conn.close()
+
 
 if __name__ == "__main__":
     main()
