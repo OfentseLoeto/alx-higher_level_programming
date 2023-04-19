@@ -28,7 +28,9 @@ def main():
     rows = cur.fetchall()
 
     for row in rows:
-        print(row)
+        if row[1] == search:
+            print(row)
+
 
         cur.close()
         conn.close()
