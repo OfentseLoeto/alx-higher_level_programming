@@ -2,17 +2,15 @@
 """
 Start link class to table in database 
 """
-from sqlalchemy import Column, Integer, String
 from sqlalchemy.txt.declarative import declarative_base
-from sqlalchemy import create_engine
+from sqlalchemy import Column, Integer, String, create_engine
 
-Base = declarative_base()
+base = declarative_base()
 
-class state(Base):
+class State(Base):
     __tablename__ = 'states'
-
     id = Column(Integer, primary_key=True, auto_increment=True, nullable=False)
     name = Column(String(128), nullable=False)
 
-    engine = create_engine('mysql://localhost:3306/<database_name>'.format(sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True )
-    base.metadata.create_all(engine)
+    engine = create_engine('MySQL://username:password@localhost:3306/mydatabase')
+    Base.metadata.create_all(engine)
