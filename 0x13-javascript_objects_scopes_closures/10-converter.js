@@ -8,7 +8,7 @@ exports.converter = function (base) {
     if (number === 0) {
       return '';
     } else {
-      return convertToBase(Math.floor(number / base)) + (number % base);
+      return convertToBase(number / base | 0) + '0123456789abcdefghijklmnopqrstuvwxyz'[number % base | 0];
     }
   };
 };
