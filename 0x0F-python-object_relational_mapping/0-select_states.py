@@ -1,24 +1,24 @@
 #!/usr/bin/python3
 import MySQLdb
+from sys import argv
 
-def list_states(username, password, database):
+if __name__ = "__main__":
 
     # Connecting to mysql server
     db = MySQLdb.connect(
-            host='localhost',
+            host="localhost",
             port=3306,
-            user=username,
-            passwd=password,
-            db=database
+            user=argv[1],
+            passwd=argv[2],
+            db=argv[3]
             )
     cursor = db.cursor()
 
     # Excecuting a query
-    query = "SELECT * FROM states ORDER BY id ASC"
-    cursor.execute(query)
+    cursor.execute("SELECT * FROM states ORDER BY id ASC")
 
     rows = cursor.fetchall()
     for row in rows:
         print(row)
-
+    cursor.close()
     db.close()
