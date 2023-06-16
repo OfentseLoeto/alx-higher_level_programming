@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 import MySQLdb
 
-def list_states(username, password, database):
-
     # Connecting to mysql server
     db = MySQLdb.connect(host='localhost', port=3306, user=username, passwd=password, db=database)
     cursor = db.cursor()
