@@ -8,12 +8,12 @@ if __name__ == "__main__":
     db_name=sys.argv[3]
 
     # Connecting to mysql server
-    db = MySQLdb.connect(host="localhost", port=3306, 
+    hbtn_0e_0_usa = MySQLdb.connect(host="localhost", port=3306, 
             user=username, 
             passwd=password, 
             db=database, charset="utf8")
 
-    cur = db.cursor()
+    cur = hbtn_0e_0_usa.cursor()
 
     # Excecuting a query
     cur.execute("SELECT * FROM states ORDER BY id ASC")
@@ -23,4 +23,4 @@ if __name__ == "__main__":
         print(rows)
 
     cur.close()
-    db.close()
+    hbtn_0e_0_usa.close()
