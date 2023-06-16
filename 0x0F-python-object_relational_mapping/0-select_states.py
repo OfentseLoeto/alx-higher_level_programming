@@ -11,17 +11,16 @@ if __name__ == "__main__":
     db = MySQLdb.connect(host="localhost", port=3306, 
             user=username, 
             passwd=password, 
-            db=database)
+            db=database, charset="utf8")
 
     cur = db.cursor()
 
     # Excecuting a query
-    cursor.execute("SELECT * FROM states ORDER BY id ASC")
+    cur.execute("SELECT * FROM states ORDER BY id ASC")
 
-    rows = cursor.fetchall()
-    for row in rows:
-        for col in row:
-        print("%s," % col
-                print "\n"
-    cursor.close()
+    rows_query = cur.fetchall()
+    for row in rows_query:
+        print(rows)
+
+    cur.close()
     db.close()
