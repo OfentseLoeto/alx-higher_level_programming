@@ -17,6 +17,8 @@ if __name__ == "__main__":
 
     rows = cursor.fetchall()
     for row in rows:
-        print(row)
+        for col in row:
+        print("%s," % col
+                print "\n"
     cursor.close()
     db.close()
