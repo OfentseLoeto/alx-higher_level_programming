@@ -2,16 +2,14 @@
 import MySQLdb
 from sys import argv
 
-if __name__ = "__main__":
+if __name__ == "__main__":
 
     # Connecting to mysql server
-    db = MySQLdb.connect(
-            host="localhost",
-            port=3306,
-            user=argv[1],
-            passwd=argv[2],
-            db=argv[3]
-            )
+    db = MySQLdb.connect(host="localhost", port=3306, 
+            user=argv[1], 
+            password=argv[2], 
+            database=argv[3])
+
     cursor = db.cursor()
 
     # Excecuting a query
