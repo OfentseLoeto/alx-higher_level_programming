@@ -1,17 +1,24 @@
 #!/usr/bin/python3
 import MySQLdb
 
+def list_states_starting_with_N(username, password, database):
+
     # Connecting to mysql server
-    db = MySQLdb.connect(host='localhost', port=3306, user=username, passwd=password, db=database)
+    db = MySQLdb.connect(
+            host='localhost',
+            port=3306,
+            user=username,
+            passwd=password,
+            db=database
+            )
     cursor = db.cursor()
 
     # Excecuting a query
-    cur.execute("SELECT * FROM states ORDER BY id ASC")
-    rows = cur.fetchall()
+    query = "SELECT * FROM states ORDER BY id ASC"
+    cursor.execute(query)
+    rows = cursor.fetchall()
     for row in rows:
-        for column in rows:
-            print "%s," %column
-            print "\n"
+        print(row)
 
     db.close()
     cursor.close()
