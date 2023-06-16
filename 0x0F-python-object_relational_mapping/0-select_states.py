@@ -8,15 +8,12 @@ def list_states(username, password, database):
     cursor = db.cursor()
 
     # Excecuting a query
-    query = "SELECT * FROM states ORDER BY id ASC"
-    cursor.execute(query)
-
-    # Fetching all the rows
-    rows = cursor.fetchall()
-
-    # Showing the results
+    cur.execute("SELECT * FROM states ORDER BY id ASC")
+    rows = cur.fetchall()
     for row in rows:
-        print(row)
+        for column in rows:
+            print "%s," %column
+            print "\n"
 
-    # Closing the db
     db.close()
+    cursor.close()
