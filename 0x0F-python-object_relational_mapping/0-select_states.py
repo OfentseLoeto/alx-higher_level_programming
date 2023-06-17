@@ -16,7 +16,8 @@ if __name__ == "__main__":
     cur = hbtn_0e_0_usa.cursor()
 
     # Excecuting a query
-    cur.execute("SELECT * FROM states ORDER BY id ASC")
+    query = "SELECT * FROM states ORDER BY id ASC"
+    query = cur.execute(query)
 
     rows_query = cur.fetchall()
     for row in rows_query:
