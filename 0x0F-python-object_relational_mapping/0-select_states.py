@@ -11,7 +11,7 @@ if __name__ == "__main__":
     hbtn_0e_0_usa = MySQLdb.connect(host="localhost", port=3306, 
             user=username, 
             passwd=password, 
-            db=database, charset="utf8")
+            db=hbtn_0e_0_usa)
 
     cur = hbtn_0e_0_usa.cursor()
 
@@ -20,7 +20,7 @@ if __name__ == "__main__":
 
     rows_query = cur.fetchall()
     for row in rows_query:
-        print(rows)
+        print(row)
 
     cur.close()
     hbtn_0e_0_usa.close()
