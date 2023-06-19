@@ -19,7 +19,7 @@ def list_states(username, password, database):
     cursor.close()
     db.close()
 
- if __name__ : "__main__":
+ if __name__ == '__main__':
      import sys
 
      username=sys.argv[1]
