@@ -1,19 +1,18 @@
 #!/usr/bin/python3
 import MySQLdb
+import sys
+if __name="__main__":
 
-def list_states_starting_with_N(username, password, database):
+    db = MySQLdb.connect(host='localhost', user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3], port=3306)
 
-    db = MySQLdb.connect(host='localhost', port=3306, user=username, passwd=password, db=database)
+    cur = db.cursor()
 
-    db = MySQLdb.cursor()
+    cur.excute("""SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC""")
 
-    query = "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC"
-
-    cursor.excecute(query)
-
-    row = cursor.fetchall()
+    row = cur.fetchall()
 
     for row in rows:
         print(row)
 
+    cur.close()
     db.close()
