@@ -2,15 +2,11 @@
 from sys import argv
 import MySQLdb
 
-username = sys.argv[1]
-password = sys.argv[2]
-database = sys.argv[3]
-
     # Connecting to mysql server
     db = MySQLdb.connect(
-            user=username,
-            passwd=password,
-            db=database,
+            user=argv[1],
+            passwd=argv[2],
+            db=argv[3],
             host='localhost',
             port=3306,
             charset="utf8"
@@ -29,7 +25,7 @@ database = sys.argv[3]
     db.close()
 
  if __name__ == '__main__':
-     if len(argv < 1:
+     if len(argv) < 1:
              print("Less arguments"):
              else:
              list_all_states()
