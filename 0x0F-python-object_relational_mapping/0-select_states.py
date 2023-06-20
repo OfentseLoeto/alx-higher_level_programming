@@ -1,15 +1,24 @@
 #!/usr/bin/python3
+from sys import argv
 import MySQLdb
 
-def list_states(username, password, database):
+username = sys.argv[1]
+password = sys.argv[2]
+database = sys.argv[3]
 
     # Connecting to mysql server
-    db = MySQLdb.connect(user=username, passwd=password, db=database, host='localhost', port=3306)
+    db = MySQLdb.connect(
+            user=username,
+            passwd=password,
+            db=database,
+            host='localhost',
+            port=3306,
+            charset="utf8"
+            )
     
     cursor = db.cursor()
 
-    query = "SELECT * FROM states ORDER ORDER BY id ASC"
-    cursor.execute(query)
+    cursor.execute("SELECT * FROM states ORDER ORDER BY id ASC")
 
     row = cursor.fetchall()
 
@@ -20,10 +29,7 @@ def list_states(username, password, database):
     db.close()
 
  if __name__ == '__main__':
-     import sys
-
-     username=sys.argv[1]
-     password=sys.argv[2]
-     database=sys.argv[3]
-
-     list_states(username, password, database)
+     if len(argv < 1:
+             print("Less arguments"):
+             else:
+             list_all_states()
