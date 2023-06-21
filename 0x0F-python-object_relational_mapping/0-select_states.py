@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-from sys import argv
 import MySQLdb
+from sys import argv
 
 def list_all_states():
     # Connecting to mysql server
@@ -14,13 +14,14 @@ def list_all_states():
             )
     
     cursor = db.cursor()
-
-    cursor.execute("SELECT * FROM states ORDER ORDER BY states.id ASC")
-
-    row = cursor.fetchall()
+    cursor.execute("SELECT * FROM states ORDER BY states.id ASC")
+    rows = cursor.fetchall()
 
     for row in rows:
         print(row)
 
     cursor.close()
     db.close()
+
+if __name__ == '__main__':
+    list_all_states()
