@@ -1,13 +1,12 @@
 #!/usr/bin/python3
+""" List all states from the database hbtn_0e_0_usa """
 import MySQLdb
-from sys import argv
+import sys
 
-def list_all_states():
-    '''
-    Fetches and print all states from the database in ascnding order of id.
-    '''
+if __name__ == "__main__":
+
     # Connecting to mysql server
-    db = MySQLdb.connect(
+    conn = MySQLdb.connect(
             user=argv[1],
             passwd=argv[2],
             db=argv[3],
@@ -16,16 +15,14 @@ def list_all_states():
             charset="utf8"
             )
     
-    cursor = db.cursor()
+    cursor = conn.cursor()
 
-    cursor.execute("SELECT * FROM states ORDER BY states.id ASC")
+    cursor.execute(""" SELECT * FROM states ORDER BY states.id ASC """)
+    
     rows = cursor.fetchall()
 
     for row in rows:
         print(row)
 
     cursor.close()
-    db.close()
-
-if __name__ == '__main__':
-    list_all_states()
+    conn.close()
