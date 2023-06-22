@@ -3,6 +3,9 @@ import MySQLdb
 from sys import argv
 
 def list_all_states():
+    '''
+    Fetches and print all states from the database in ascnding order of id.
+    '''
     # Connecting to mysql server
     db = MySQLdb.connect(
             user=argv[1],
@@ -10,9 +13,11 @@ def list_all_states():
             db=argv[3],
             host='localhost',
             port=3306,
+            charset="utf8"
             )
     
     cursor = db.cursor()
+
     cursor.execute("SELECT * FROM states ORDER BY states.id ASC")
     rows = cursor.fetchall()
 
