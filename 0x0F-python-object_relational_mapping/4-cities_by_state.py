@@ -19,7 +19,7 @@ def list_cities():
 
     #Creating a cursor
     cursor = db.cursor()
-    cursor.execute("SELECT * FROM cities INNER JOIN states ON cities.state_id = states.id ORDER BY cities.id ASC")
+    cursor.execute("SELECT cities.id, cities.name, states.name FROM cities INNER JOIN states ON cities.state_id = states.id ORDER BY cities.id ASC")
 
     # Fetch all the rows
     rows = cursor.fetchall()
