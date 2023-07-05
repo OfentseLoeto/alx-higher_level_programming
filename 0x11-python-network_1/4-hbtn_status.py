@@ -1,12 +1,13 @@
 #!/usr/bin/python3
+'''
+ Module to fetch and display the body response of a URL
+'''
 import requests
-# Module to fetch and display the body response of a URL
-
 
 if __name__ == "__main__":
     url = 'https://alx-intranet.hbtn.io/status'
 
-    response = requests.get('https://alx-intranet.hbtn.io/status')
+    response = requests.get(url)
     body = response.text
     # GET request to the URL and retrieve the response
 
