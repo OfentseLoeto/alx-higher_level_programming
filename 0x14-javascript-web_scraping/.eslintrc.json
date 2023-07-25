@@ -1,0 +1,6 @@
+{
+  "extends': ["semistandard", "airbnb-base"],
+  "rules": {
+    "no-var": "error"
+  }
+}
