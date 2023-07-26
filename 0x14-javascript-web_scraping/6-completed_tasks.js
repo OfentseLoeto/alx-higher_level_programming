@@ -29,9 +29,7 @@ const completedTasks = {};
 }
 });
         
-  for (const userId in completedTasks) {
-    console.log(`'${userId}': ${completedTasks[userId]},`);
-}
+    console.log(completedTasks);
       
 } else {
     console.error(`Error: ${response.statusCode} - ${response.statusMessage}`);
