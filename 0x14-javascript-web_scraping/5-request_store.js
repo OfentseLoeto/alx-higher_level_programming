@@ -29,7 +29,7 @@ function fetchPageContent(url, filePath) {
 }
 
 const url = process.argv[2];
-const filePath = process.argv[3];
+const filePath = process.argv[4];
 
 if (!url || !filePath) {
   console.error('Provide URL and filePath');
