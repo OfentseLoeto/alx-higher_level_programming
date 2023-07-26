@@ -1,28 +1,16 @@
 #!/usr/bin/node
-'use strict';
+
 // A script that prints the title of a Star Wars movie where the episode number matches a given integer.
 
 const request = require('request');
+const movieId = process.argv[2];
+const url = 'https://swapi-api.alx-tools.com/api/films/1/';
 
-function getMovieTitle(movieId) {
- const apiUrl = 'https://swapi-api.alx-tools.com/api/films/:id${movieId}';
- request.get(apiUrl, (error, response, body) => {
- if (error) {
-   console.error(error);
-
-} else if (response.statusCode === 200) {
-  const movieData = JSON.parse(body);
-  console.log(movieData.title);
+request (url, function (error, response, body) {
+  if (error) {
+    console.log(error);
 } else {
-  console.error('Error: Failed to get movie with ID ${movieId}. Status code: ${response.statusCode}');
+  const data = JSON.parse(body);
+  console.log(data.title);
 }
 });
-}
-
-if (process.argv.length !== 3) {
-  console.error('(Usage: 3-starwars_title.js <movie_id>');
-
-} else {
-  const movieId = process.argv[2];
-  getMovieTitle(movieId);
-}
