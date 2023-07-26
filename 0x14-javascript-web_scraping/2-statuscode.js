@@ -1,6 +1,6 @@
 #!/usr/bin/node
 'use strict';
-// Script that display the status code of a GET request.
+// This script that display the status code of a GET request.
 
 const request = require('request');
 
