@@ -3,7 +3,7 @@
 
 const request = require('request');
 
-function countMovies(apiUrl, characterId) {
+function countMovies (apiUrl, characterId) {
   request(apiUrl, (error, response, body) => {
     if (error) {
       console.error('Error:', error);
@@ -20,7 +20,6 @@ function countMovies(apiUrl, characterId) {
     }
   });
 }
-
 
 const apiUrl = process.argv[2];
 

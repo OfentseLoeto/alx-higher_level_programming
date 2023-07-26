@@ -4,22 +4,19 @@
 
 const request = require('request');
 
-function getStatusCode(url) {
+function getStatusCode (url) {
   request.get(url, (error, response) => {
-
     if (error) {
       console.error(error);
-
-} else {
-  console.log('Code: ${response.statusCode}');
-}
-});
+    } else {
+      console.log(`Code: ${response.statusCode}`);
+    }
+  });
 }
 
 if (process.argv.length !== 3) {
- console.error('Usage: 2-statuscode.js <URL>');
-
+  console.error('Usage: 2-statuscode.js <URL>');
 } else {
   const url = process.argv[2];
   getStatusCode(url);
-} 
+}
