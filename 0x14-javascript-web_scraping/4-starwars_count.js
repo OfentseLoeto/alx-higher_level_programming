@@ -3,29 +3,22 @@
 
 const request = require('request');
 
-function countMovies (apiUrl, characterId) {
-  request(apiUrl, (error, response, body) => {
-    if (error) {
-      console.error('Error:', error);
-    } else {
-      if (response.statusCode === 200) {
-        const movieData = JSON.parse(body);
-        const moviesWithCharacter = movieData.results.filter(movie =>
-          movie.characters.includes(`https://swapi-api.alx-tools.com/api/people/${characterId}/`)
-        );
-        console.log(`${moviesWithCharacter.length}`);
-      } else {
-        console.error(`Error: ${response.statusCode} - ${response.statusMessage}`);
-      }
-    }
-  });
+if (process.argv.length !== 3) {
+  console.error('Usage: node starwars_count.js <API_URL>');
+  process.exit(1);
 }
 
 const apiUrl = process.argv[2];
 
-if (!apiUrl) {
-  console.error('Please provide the API URL');
-} else {
-  const characterId = 18;
-  countMovies(apiUrl, characterId);
-}
+request.get(apiUrl, (error, response, body) => {
+  if (error) {
+    console.error('Error:', error.message);
+  } else {
+    const data = JSON.parse(body);
+    const characterId = 18;
+    const moviesWithWedgeAntilles = data.results.filter(movie =>
+      movie.characters.includes(`https://swapi-api.alx-tools.com/api/people/${characterId}/`)
+    );
+    console.log(moviesWithWedgeAntilles.length);
+  }
+});
